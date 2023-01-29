@@ -6,8 +6,8 @@ usuarioCtrl.getUsuarios = async (req, res) =>{
   try{
     logger.debug("[getUsuarios] Comienzo servicio para obtener todos los  usuarios");
     const usuarios = await Usuario.find();
-
-    if(usuarios){
+    
+    if(usuarios.length >= 1){
       logger.debug("[getUsuarios] Usuarios obtenidos: %O", usuarios);
       res.json({
         error: '0',

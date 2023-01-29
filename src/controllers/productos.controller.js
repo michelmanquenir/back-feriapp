@@ -3,11 +3,11 @@ const logger = require('../utils/logger')('ProductoController');
 const productoCtrl = {};
 
 productoCtrl.getProductos = async (req, res) =>{
-  try{
+  try {
     logger.debug("[getProductos] Comienzo servicio para obtener todos los productos");
     const productos = await Producto.find();
 
-    if(productos){
+    if(productos.length >= 1){
       logger.debug("[getProductos] Productos obtenidos: %O", productos);
       res.json({
         error: '0',
