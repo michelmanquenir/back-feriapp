@@ -15,7 +15,7 @@ productoCtrl.getProductos = async (req, res) =>{
         productos: productos
       });
     } else {
-      logger.debug("[getProductos] No se obtuvieron usuarios: %O", productos);
+      logger.debug("[getProductos] No se obtuvieron productos: %O", productos);
 
       res.json({
         error: '0',
