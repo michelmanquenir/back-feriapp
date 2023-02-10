@@ -8,7 +8,8 @@ const ProductoSchema = new Schema({
     precio_venta: Number,
     en_stock: Number,
     stock: Number,
-    img: String
+    img: String,
+    estado: Number
 }, {
     timestamps: true
 });
