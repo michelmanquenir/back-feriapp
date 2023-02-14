@@ -1,5 +1,5 @@
 const Venta = require('../models/Venta');
-const logger = require('../utils/logger')('VentaController');
+const logger = require('../utils/logger')('VentasController');
 const ventaCtrl = {};
 
 ventaCtrl.getVentas = async (req, res) =>{

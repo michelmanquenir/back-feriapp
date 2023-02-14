@@ -9,8 +9,7 @@ router.route('/').get(getProductos);
 
 router.route('/crearProducto').post(crearProducto);
 
-router.route('/:id')
-   //.get(getProductoById)
-   .put(updateProducto)
-   .delete(deleteProducto);
+router.route('/delete').post(deleteProducto);
+router.route('/update').post(updateProducto);
+
 module.exports = router;

@@ -1,11 +1,13 @@
 const Producto = require('../models/Producto');
-const logger = require('../utils/logger')('ProductoController');
+const logger = require('../utils/logger')('ProductosController');
 const productoCtrl = {};
 
 productoCtrl.getProductos = async (req, res) =>{
   try {
     logger.debug("[getProductos] Comienzo servicio para obtener todos los productos");
-    const productos = await Producto.find();
+    const productos = await Producto.find({
+      estado: 1
+    });
 
     if(productos.length >= 1){
       logger.debug("[getProductos] Productos obtenidos: %O", productos);
@@ -89,9 +91,9 @@ productoCtrl.crearProducto = async (req, res) => {
 
 productoCtrl.updateProducto = async (req, res) => {
   try {
+    console.log("llegue aca");
       logger.debug("[updateProducto] Inicio servicio actualizar producto");
-      const { id } = req.params;
-      const { nombre, rut_empresa, codigo, precio_compra, precio_venta, en_stock, stock, img } = req.body;
+      const { id, nombre, rut_empresa, codigo, precio_compra, precio_venta, en_stock, stock, img } = req.body;
       logger.debug("[crearProducto] Se obtiene parametro de request");
       logger.debug("[crearProducto] --> nombre: %O", nombre);
       logger.debug("[crearProducto] --> rut_empresa: %O", rut_empresa);
@@ -129,7 +131,7 @@ productoCtrl.updateProducto = async (req, res) => {
 productoCtrl.deleteProducto = async (req, res) => {
   try {
       logger.debug("[deleteProducto] Inicio servicio eliminar producto");
-      const { id } = req.params;
+      const { id } = req.body;
       logger.debug("[deleteProducto] Obtenemos id producto a eliminar: " + id);
       await Producto.findOneAndUpdate({ _id: id }, {
           estado: 0

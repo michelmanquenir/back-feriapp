@@ -1,5 +1,5 @@
 const Usuario = require('../models/Usuario');
-const logger = require('../utils/logger')('UsuarioController');
+const logger = require('../utils/logger')('UsuariosController');
 const usuarioCtrl = {};
 
 usuarioCtrl.getUsuarios = async (req, res) =>{
