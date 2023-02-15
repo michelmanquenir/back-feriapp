@@ -1,17 +1,22 @@
 const { Schema, model } = require('mongoose');
 
 const VentaSchema = new Schema({
+  usuario: {
     id_usuario: String,
-    total: Number,
-    ganancia: Number,
-    fecha: String,
-    productos: [{
-      id_producto: String,
-      nombre_producto: String,
-      precio_compra: Number,
-      precio_venta: Number
+    email: String,
+  },
+  productos: [{
+    id_producto: String,
+    cantidad: Number,
+    nombre: String,
+    codigo: String,
+    precio_compra: Number,
+    precio_venta: Number,
+    stock: Number,
   }],
-
+  rut_empresa: String,
+  total_ganancia: Number,
+  total_venta: Number,
 }, {
     timestamps: true
 });

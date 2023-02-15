@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "63ec325cc0493f569ede8d8f"
+  },
+  "usuario": {
+    "id_usuario": "63dcf4b7c4ce61a8db1bf757",
+    "email": "michel.alejandro1994@gmail.com"
+  },
+  "productos": [
+    {
+      "id_producto": "63dcf360f71efbf62518b2d7",
+      "cantidad": 2,
+      "nombre": "arroz",
+      "codigo": "001",
+      "precio_compra": 1200,
+      "precio_venta": 2000,
+      "stock": 20
+    },
+    {
+      "id_producto": "63e433f94dbd035281ac04fa",
+      "cantidad": 2,
+      "nombre": "Salmon",
+      "codigo": "002",
+      "precio_compra": 1500,
+      "precio_venta": 5000,
+      "stock": 10
+    }
+  ],
+  "rut_empresa": "186735331",
+  "total_venta": 14000,
+  "total_ganancia": 8600
+}]
