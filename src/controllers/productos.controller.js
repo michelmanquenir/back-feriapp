@@ -38,7 +38,7 @@ productoCtrl.getProductos = async (req, res) =>{
 productoCtrl.crearProducto = async (req, res) => {
   try {
       logger.debug("[crearProducto] Inicio servicio crear producto");
-      const { nombre, rut_empresa, codigo, precio_compra, precio_venta, en_stock, stock, img } = req.body;
+      const { nombre, rut_empresa, codigo, precio_compra, precio_venta, estado, en_stock, stock, img } = req.body;
       logger.debug("[crearProducto] Se obtiene parametro de request");
       logger.debug("[crearProducto] --> nombre: %O", nombre);
       logger.debug("[crearProducto] --> rut_empresa: %O", rut_empresa);
@@ -56,7 +56,7 @@ productoCtrl.crearProducto = async (req, res) => {
           logger.debug("[crearProducto] el codigo ya existe en esta empresa");
           res.json({
               error: '2',
-              message: 'El codigo ya existe en esta empresa'
+              message: 'El codigo de producto ya esta registrado en esta empresa'
           });
           return;
       }else{
@@ -71,7 +71,8 @@ productoCtrl.crearProducto = async (req, res) => {
             precio_venta: precio_venta,
             en_stock: en_stock,
             stock: stock,
-            img: img
+            img: img,
+            estado: estado
           });
           await newProducto.save();
           logger.debug("[crearProducto] Producto guardado con exito");
@@ -93,7 +94,7 @@ productoCtrl.updateProducto = async (req, res) => {
   try {
     console.log("llegue aca");
       logger.debug("[updateProducto] Inicio servicio actualizar producto");
-      const { id, nombre, rut_empresa, codigo, precio_compra, precio_venta, en_stock, stock, img } = req.body;
+      const { id, nombre, rut_empresa, codigo, precio_compra, precio_venta, estado, en_stock, stock, img } = req.body;
       logger.debug("[crearProducto] Se obtiene parametro de request");
       logger.debug("[crearProducto] --> nombre: %O", nombre);
       logger.debug("[crearProducto] --> rut_empresa: %O", rut_empresa);
@@ -102,6 +103,7 @@ productoCtrl.updateProducto = async (req, res) => {
       logger.debug("[crearProducto] --> precio_venta: %O", precio_venta);
       logger.debug("[crearProducto] --> en_stock: %O", en_stock);
       logger.debug("[crearProducto] --> stock: %O", stock);
+      logger.debug("[crearProducto] --> estado: %O", estado);
       logger.debug("[crearProducto] --> img: %O", img);
       logger.debug("[updateProducto] Comienza actualizacion");
       await Producto.findOneAndUpdate({ _id: id }, {
@@ -112,7 +114,8 @@ productoCtrl.updateProducto = async (req, res) => {
         precio_venta: precio_venta,
         en_stock: en_stock,
         stock: stock,
-        img: img
+        img: img,
+        estado: estado
       });
       logger.debug("[updateProducto] Producto actualizado con exito");
       res.json({

@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "63dcf360f71efbf62518b2d7"
+  },
+  "nombre": "arroz",
+  "rut_empresa": "186735331",
+  "codigo": "001",
+  "precio_compra": 1200,
+  "precio_venta": 2000,
+  "en_stock": 1,
+  "stock": 20,
+  "img": "urlimagen",
+  "estado": 1,
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676219192812"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63e433f94dbd035281ac04fa"
+  },
+  "nombre": "Salmon",
+  "rut_empresa": "186735331",
+  "codigo": "002",
+  "precio_compra": 1500,
+  "precio_venta": 5000,
+  "en_stock": 1,
+  "stock": 20,
+  "img": "slmn.jpg",
+  "estado": 1,
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676424119814"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63e5982f015f12ff6de6ca2a"
+  },
+  "nombre": "Cereal",
+  "rut_empresa": "186735331",
+  "codigo": "003",
+  "precio_compra": 1000,
+  "precio_venta": 1350,
+  "en_stock": 1,
+  "stock": 20,
+  "img": "Cereal.jpg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675991087723"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676219098841"
+    }
+  },
+  "__v": 0,
+  "estado": 1
+}]

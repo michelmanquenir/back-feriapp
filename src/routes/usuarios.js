@@ -3,9 +3,16 @@ const router = Router();
 
 const jwt = require('jsonwebtoken');
 
-const { getUsuarios } = require('../controllers/usuarios.controller');
+const {
+    getUsuarios,
+    registroUsuario,
+    loginUsuario
+} = require('../controllers/usuarios.controller');
 
-router.route('/')
-    .get(getUsuarios);
+
+router.route('/registro').post(registroUsuario);
+router.route('/login').post(loginUsuario);
+
+router.route('/').get(getUsuarios);
 
 module.exports = router;
