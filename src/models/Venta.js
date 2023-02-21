@@ -17,6 +17,7 @@ const VentaSchema = new Schema({
   rut_empresa: String,
   total_ganancia: Number,
   total_venta: Number,
+  metodo_pago: Number
 }, {
     timestamps: true
 });
