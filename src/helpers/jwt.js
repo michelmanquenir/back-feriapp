@@ -1,0 +1,17 @@
+const jwt = require('jwt-simple');
+const moment = require('moment');
+
+var secret = 'michel-secret';
+
+ exports.createToken = function(user){
+  var payload = {
+    sub: user._id,
+    nombre:  user.nombre,
+    apellido: user.apellido,
+    email: user.email,
+    iat: moment().unix(),
+    exp: moment().add(1, 'days').unix()
+  };
+  return jwt.encode(payload, secret);
+ }
+

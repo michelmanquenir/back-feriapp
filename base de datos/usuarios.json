@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "63dcf4b7c4ce61a8db1bf757"
+  },
+  "nombre": "Michel",
+  "apellido": "Manqueñir",
+  "rut": "186735331",
+  "telefono": "942010180",
+  "email": "michel.alejandro1994@gmail.com",
+  "perfil": 1,
+  "status": 1,
+  "fecha_nacimiento": "24/01/1994",
+  "direccion": "poseidon 3052, puente alto",
+  "password": "1234"
+}]

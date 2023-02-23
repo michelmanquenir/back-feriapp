@@ -1,12 +1,13 @@
 const { Schema, model } = require('mongoose');
 
 const UsuarioSchema = new Schema({
-    nombre: String,
-    apellido: String,
-    rut: String,
-    password: String,
+    nombre: { type: String, required: true },
+    apellido: { type: String, required: true },
+    rut: { type: String, required: true },
+    rut_empresa: String,
+    password: { type: String, required: true },
     telefono: String,
-    email: String,
+    email: { type: String, required: true },
     perfil: Number,
     status: Number,
     fecha_nacimiento: String,
