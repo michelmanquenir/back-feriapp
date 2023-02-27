@@ -1,7 +1,4 @@
 [{
-  "_id": {
-    "$oid": "63ec325cc0493f569ede8d8f"
-  },
   "usuario": {
     "id_usuario": "63dcf4b7c4ce61a8db1bf757",
     "email": "michel.alejandro1994@gmail.com"
@@ -29,4 +26,25 @@
   "rut_empresa": "186735331",
   "total_venta": 14000,
   "total_ganancia": 8600
-}]
+},
+{
+  "usuario": {
+    "id_usuario": "63dcf4b7c4ce61a8db1bf757",
+    "email": "michel.alejandro1994@gmail.com"
+  },
+  "productos": [
+    {
+      "id_producto": "63efb6a658626bf9bf123f26",
+      "cantidad": 2,
+      "nombre": "harina",
+      "codigo": "005",
+      "precio_compra": 1000,
+      "precio_venta": 1300,
+      "stock": 20
+    }
+  ],
+  "rut_empresa": "186735331",
+  "total_venta": 2600,
+  "total_ganancia": 600
+}
+]

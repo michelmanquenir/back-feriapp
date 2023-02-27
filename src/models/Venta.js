@@ -4,6 +4,7 @@ const VentaSchema = new Schema({
   usuario: {
     id_usuario: String,
     email: String,
+    nombre: String,
   },
   productos: [{
     id_producto: String,
