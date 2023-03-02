@@ -113,25 +113,28 @@ usuarioCtrl.loginUsuario = async (req, res) =>{
       logger.debug("[loginUsuario] Email no encontrado en base de datos");
       res.json({
         error: '1',
-        message: 'Email o password incorrecto'
+        message: 'Email o password incorrecto',
+        validUser: false
       });
     } else {
       logger.debug("[loginUsuario] Email encontrado en base de datos");
       let usuario = cliente_arr[0];
       bcrypt.compare(data.password, usuario.password, async function(error, check){
         if(check){
-          logger.debug("[loginUsuario] Password correcta");
+          logger.debug("[loginUsuario] Usuario logeado");
           res.json({
             error: '1',
             message: 'Usuario logeado',
             usuario: usuario,
-            token: jwt.createToken(usuario)
+            token: jwt.createToken(usuario),
+            validUser: true
           });
         } else {
           logger.debug("[loginUsuario] Password incorrecta");
           res.json({
             error: '1',
-            message: 'Password incorrecta'
+            message: 'Password incorrecta',
+            validUser: false
           });
         }
       })
@@ -140,7 +143,8 @@ usuarioCtrl.loginUsuario = async (req, res) =>{
     logger.error("[loginUsuario] Error en el login del usuario: %O", e.message);
     res.json({
         error: '1',
-        message: 'Error:'+ e.message
+        message: 'Error:'+ e.message,
+        validUser: false
     });
   }
 
