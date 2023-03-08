@@ -1,15 +1,53 @@
 [{
   "_id": {
-    "$oid": "63dcf4b7c4ce61a8db1bf757"
+    "$oid": "63f13b70c947d486a0cf3da2"
   },
   "nombre": "Michel",
-  "apellido": "Manqueñir",
+  "apellido": "Manquenir",
   "rut": "186735331",
+  "rut_empresa": "186735331",
+  "password": "$2a$10$.YvU3F3VigRg2ZQx1JyLlu7DPHXVS4NSdqh3sORUZByd7e3ZzACCa",
   "telefono": "942010180",
   "email": "michel.alejandro1994@gmail.com",
   "perfil": 1,
   "status": 1,
   "fecha_nacimiento": "24/01/1994",
-  "direccion": "poseidon 3052, puente alto",
-  "password": "1234"
+  "direccion": "poseidon 3052, pte alto",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676753776309"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676753776309"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fff336a5303a1f27ca502d"
+  },
+  "nombre": "Daniel",
+  "apellido": "Manquenir",
+  "rut": "141863215",
+  "rut_empresa": "186735331",
+  "password": "$2a$10$ACXhOuOPe/c7rHV7GyGnT.ahqCBopzCt5GkX3wHogA7QLht4WGy/O",
+  "telefono": "971259187",
+  "email": "danielmanquenir@gmail.com",
+  "perfil": 4,
+  "status": 1,
+  "fecha_nacimiento": "13/08/1981",
+  "direccion": "poseidon 3052, pte alto",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677718326364"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1677718326364"
+    }
+  },
+  "__v": 0
 }]

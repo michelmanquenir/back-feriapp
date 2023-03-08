@@ -32,5 +32,49 @@ ventaCtrl.getVentas = async (req, res) =>{
   }
 }
 
+ventaCtrl.vender = async (req, res) => {
+  try {
+    logger.debug("[vender] Comienzo servicio para realizar la venta");
+
+    const { usuario, productos, rut_empresa, total_ganancia, total_venta, metodo_pago} = req.body;
+      logger.debug("[vender] Se obtiene parametro de request");
+      logger.debug("[vender] --> usuario: %O", usuario);
+      logger.debug("[vender] --> productos: %O", productos);
+      logger.debug("[vender] --> rut_empresa: %O", rut_empresa);
+      logger.debug("[vender] --> total_ganancia: %O", total_ganancia);
+      logger.debug("[vender] --> total_venta: %O", total_venta);
+      logger.debug("[vender] --> metodo_pago: %O", metodo_pago);
+      let nuevoStock = 0;
+      let countProductos = 0;
+      //validar que los productos en stock sean menores que la venta
+      logger.debug("[vender] Comenzamos con el proceso de venta");
+      countProductos = productos.length;
+      for(let i = 0; i < countProductos; i++){
+        let idProducto = productos[i].id_producto;
+        console.log(idProducto);
+      }
+      const newVenta = new Venta({
+        usuario: usuario,
+        productos: productos,
+        rut_empresa: rut_empresa,
+        total_ganancia: total_ganancia,
+        total_venta: total_venta,
+        metodo_pago: metodo_pago,
+      });
+
+
+
+    //await newVenta.save();
+
+
+  } catch (e) {
+    logger.error("[vender] Error al realizar la venta: %O", e.message);
+    res.json({
+        error: '1',
+        message: 'Error: ' + e.message
+    });
+  }
+}
+
 
 module.exports = ventaCtrl;

@@ -1,7 +1,11 @@
 [{
+  "_id": {
+    "$oid": "63fa93a789c761243160fba0"
+  },
   "usuario": {
     "id_usuario": "63dcf4b7c4ce61a8db1bf757",
-    "email": "michel.alejandro1994@gmail.com"
+    "email": "michel.alejandro1994@gmail.com",
+    "nombre": "Michel"
   },
   "productos": [
     {
@@ -25,12 +29,16 @@
   ],
   "rut_empresa": "186735331",
   "total_venta": 14000,
-  "total_ganancia": 8600
-},
-{
+  "total_ganancia": 8600,
+  "metodo_pago": 0
+},{
+  "_id": {
+    "$oid": "63fa93a789c761243160fba1"
+  },
   "usuario": {
     "id_usuario": "63dcf4b7c4ce61a8db1bf757",
-    "email": "michel.alejandro1994@gmail.com"
+    "email": "michel.alejandro1994@gmail.com",
+    "nombre": "carmiña"
   },
   "productos": [
     {
@@ -45,6 +53,6 @@
   ],
   "rut_empresa": "186735331",
   "total_venta": 2600,
-  "total_ganancia": 600
-}
-]
+  "total_ganancia": 600,
+  "metodo_pago": 1
+}]

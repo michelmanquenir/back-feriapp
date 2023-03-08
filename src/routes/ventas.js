@@ -3,8 +3,9 @@ const router = Router();
 
 const jwt = require('jsonwebtoken');
 
-const { getVentas } = require('../controllers/ventas.controller');
+const { getVentas, vender } = require('../controllers/ventas.controller');
 
 router.route('/').get(getVentas);
+router.route('/vender').post(vender);
 
 module.exports = router;

@@ -2,7 +2,7 @@
   "_id": {
     "$oid": "63dcf360f71efbf62518b2d7"
   },
-  "nombre": "arroz",
+  "nombre": "Arroz tucapel azul",
   "rut_empresa": "186735331",
   "codigo": "001",
   "precio_compra": 1200,
@@ -13,25 +13,25 @@
   "estado": 1,
   "updatedAt": {
     "$date": {
-      "$numberLong": "1676219192812"
+      "$numberLong": "1676938244632"
     }
   }
 },{
   "_id": {
     "$oid": "63e433f94dbd035281ac04fa"
   },
-  "nombre": "Salmon",
+  "nombre": "jurel",
   "rut_empresa": "186735331",
   "codigo": "002",
   "precio_compra": 1500,
   "precio_venta": 5000,
   "en_stock": 1,
   "stock": 20,
-  "img": "slmn.jpg",
+  "img": "salmon.jpg",
   "estado": 1,
   "updatedAt": {
     "$date": {
-      "$numberLong": "1676424119814"
+      "$numberLong": "1676938234103"
     }
   }
 },{
@@ -58,4 +58,148 @@
   },
   "__v": 0,
   "estado": 1
+},{
+  "_id": {
+    "$oid": "63eec21a08c0cc239efa2549"
+  },
+  "nombre": "Leche soprole",
+  "rut_empresa": "186735331",
+  "codigo": "004",
+  "precio_compra": 980,
+  "precio_venta": 1300,
+  "en_stock": 1,
+  "stock": 20,
+  "img": "leche.jpg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676591642156"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676591642156"
+    }
+  },
+  "__v": 0,
+  "estado": 1
+},{
+  "_id": {
+    "$oid": "63efb6a658626bf9bf123f26"
+  },
+  "nombre": "harina",
+  "rut_empresa": "186735331",
+  "codigo": "005",
+  "precio_compra": 1000,
+  "precio_venta": 1300,
+  "en_stock": 1,
+  "stock": 15,
+  "img": "harina.jpg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676654246418"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1677718088788"
+    }
+  },
+  "__v": 0,
+  "estado": 1
+},{
+  "_id": {
+    "$oid": "63efb7eff6d5373c144a5a03"
+  },
+  "nombre": "Cereal Mono Rolls",
+  "rut_empresa": "186735331",
+  "codigo": "006",
+  "precio_compra": 1200,
+  "precio_venta": 1500,
+  "en_stock": 1,
+  "stock": 20,
+  "img": "mono.jpg",
+  "estado": 1,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676654575635"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676654575635"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63efdab7f6d5373c144a5a07"
+  },
+  "nombre": "Atun VanCamps",
+  "rut_empresa": "186735331",
+  "codigo": "007",
+  "precio_compra": 1300,
+  "precio_venta": 2000,
+  "en_stock": 1,
+  "stock": 10,
+  "img": "atun.jpg",
+  "estado": 1,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676663479951"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676663479951"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63efdaebf6d5373c144a5a0c"
+  },
+  "nombre": "Arroz tucapel",
+  "rut_empresa": "186735331",
+  "codigo": "008",
+  "precio_compra": 1200,
+  "precio_venta": 1500,
+  "en_stock": 1,
+  "stock": 10,
+  "img": "arroz.jpg",
+  "estado": 0,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676663531556"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676734307220"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63f40c302eac321462017bc7"
+  },
+  "nombre": "Arroz miraflores",
+  "rut_empresa": "186735331",
+  "codigo": "010",
+  "precio_compra": 1200,
+  "precio_venta": 1500,
+  "en_stock": 1,
+  "stock": 30,
+  "img": "arroz.jpg",
+  "estado": 0,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676938288270"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676938302148"
+    }
+  },
+  "__v": 0
 }]
