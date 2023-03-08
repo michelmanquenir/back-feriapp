@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "fe62c9a3-2a6a-40c0-84b6-17251201422c",
+		"name": "usuarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18761076"
+	},
+	"item": [
+		{
+			"name": "getUsuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Daniel\",\n    \"apellido\": \"Manquenir\",\n    \"rut\": \"141863215\",\n    \"rut_empresa\": \"186735331\",\n    \"password\": \"1234\",\n    \"telefono\": \"971259187\",\n    \"email\": \"danielmanqueñir@gmail.com\",\n    \"perfil\": 4,\n    \"status\": 1,\n    \"fecha_nacimiento\": \"13/08/1981\",\n    \"direccion\": \"poseidon 3052, pte alto\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/usuarios/registro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"usuarios",
+						"registro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"michel.alejandro1994@gmail.com\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/usuarios/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"usuarios",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

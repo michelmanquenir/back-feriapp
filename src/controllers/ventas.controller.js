@@ -51,7 +51,7 @@ ventaCtrl.vender = async (req, res) => {
       countProductos = productos.length;
       for(let i = 0; i < countProductos; i++){
         let idProducto = productos[i].id_producto;
-        console.log(idProducto);
+        
       }
       const newVenta = new Venta({
         usuario: usuario,

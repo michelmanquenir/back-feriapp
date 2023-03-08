@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "c1793456-fccd-4f0d-b9ce-6d9c3310ce21",
+		"name": "Ventas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18761076"
+	},
+	"item": [
+		{
+			"name": "getVentas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/ventas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"ventas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vender",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"usuario\": {\n        \"id_usuario\": \"63dcf4b7c4ce61a8db1bf757\",\n        \"email\": \"michel.alejandro1994@gmail.com\",\n        \"nombre\": \"Michel\"\n    },\n    \"productos\": [\n        {\n            \"id_producto\": \"63dcf360f71efbf62518b2d7\",\n            \"cantidad\": 3,\n            \"nombre\": \"arroz\",\n            \"codigo\": \"001\",\n            \"precio_compra\": 1200,\n            \"precio_venta\": 2000\n        },\n        {\n            \"id_producto\": \"63e433f94dbd035281ac04fa\",\n            \"cantidad\": 2,\n            \"nombre\": \"Salmon\",\n            \"codigo\": \"002\",\n            \"precio_compra\": 1500,\n            \"precio_venta\": 5000,\n            \"stock\": 10\n        }\n    ],\n    \"rut_empresa\": \"186735331\",\n    \"total_venta\": 14000,\n    \"total_ganancia\": 8600,\n    \"metodo_pago\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/ventas/vender",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"ventas",
+						"vender"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

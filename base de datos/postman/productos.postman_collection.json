@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "3659c4dc-79d6-416d-ba8c-22a25a925d29",
+		"name": "productos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18761076"
+	},
+	"item": [
+		{
+			"name": "getProductos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearProducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Mantequilla\",\n    \"rut_empresa\": \"186735331\",\n    \"codigo\": \"003\",\n    \"precio_compra\": 1000,\n    \"precio_venta\": 1300,\n    \"en_stock\": 1,\n    \"stock\": 12,\n    \"img\": \"Mantequilla.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/productos/crearProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"productos",
+						"crearProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"63e5982f015f12ff6de6ca2a\",\n    \"nombre\": \"Cereal\",\n    \"rut_empresa\": \"186735331\",\n    \"codigo\": \"003\",\n    \"precio_compra\": 1000,\n    \"precio_venta\": 1350,\n    \"en_stock\": 1,\n    \"stock\": 20,\n    \"img\": \"Cereal.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/productos/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"productos",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"63e5982f015f12ff6de6ca2a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/productos/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"productos",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
