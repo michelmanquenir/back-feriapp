@@ -1,4 +1,6 @@
+const { findById } = require('../models/Venta');
 const Venta = require('../models/Venta');
+const Producto = require('../models/Producto');
 const logger = require('../utils/logger')('VentasController');
 const ventaCtrl = {};
 
@@ -49,9 +51,14 @@ ventaCtrl.vender = async (req, res) => {
       //validar que los productos en stock sean menores que la venta
       logger.debug("[vender] Comenzamos con el proceso de venta");
       countProductos = productos.length;
+      //necesito que crees una funcion que recorra los productos y que segun su cantidad se descuenten de la base de datos
       for(let i = 0; i < countProductos; i++){
         let idProducto = productos[i].id_producto;
-        
+        let productoBD = await Producto.findById(idProducto);
+        nuevoStock = productoBD.stock - productos[i].cantidad;
+        await Producto.findOneAndUpdate({ _id: idProducto }, {
+          stock: nuevoStock
+        });
       }
       const newVenta = new Venta({
         usuario: usuario,
