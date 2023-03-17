@@ -51,7 +51,8 @@ ventaCtrl.vender = async (req, res) => {
       //validar que los productos en stock sean menores que la venta
       logger.debug("[vender] Comenzamos con el proceso de venta");
       countProductos = productos.length;
-      //necesito que crees una funcion que recorra los productos y que segun su cantidad se descuenten de la base de datos
+
+      logger.debug("[vender] Comenzamos descuento de stock");
       for(let i = 0; i < countProductos; i++){
         let idProducto = productos[i].id_producto;
         let productoBD = await Producto.findById(idProducto);
@@ -60,6 +61,8 @@ ventaCtrl.vender = async (req, res) => {
           stock: nuevoStock
         });
       }
+
+      logger.debug("[vender] Comenzamos guardado de venta");
       const newVenta = new Venta({
         usuario: usuario,
         productos: productos,
@@ -69,10 +72,8 @@ ventaCtrl.vender = async (req, res) => {
         metodo_pago: metodo_pago,
       });
 
-
-
-    //await newVenta.save();
-
+      await newVenta.save();
+      logger.debug("[vender] Venta creada con exito");
 
   } catch (e) {
     logger.error("[vender] Error al realizar la venta: %O", e.message);
