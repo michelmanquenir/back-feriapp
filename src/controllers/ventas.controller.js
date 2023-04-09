@@ -75,6 +75,11 @@ ventaCtrl.vender = async (req, res) => {
       await newVenta.save();
       logger.debug("[vender] Venta creada con exito");
 
+      res.json({
+        error: '0',
+        message: 'Venta guardada con exito'
+      });
+
   } catch (e) {
     logger.error("[vender] Error al realizar la venta: %O", e.message);
     res.json({
